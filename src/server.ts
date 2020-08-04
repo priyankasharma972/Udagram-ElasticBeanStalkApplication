@@ -15,8 +15,7 @@ import validUrl from 'valid-url';
   app.use(bodyParser.json());
 
   
-  // A RESTFUL ENDPOINT to GET /filteredimage?image_url={{URL}}
-  app.get("/filteredimage/", async (req, res) => {
+  app.get("/filteredimage", async (req, res) => {
     try {
       let { image_url } = req.query;
 
