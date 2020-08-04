@@ -36,9 +36,7 @@ import validUrl from 'valid-url';
       if(imgPath) {
         res.on('finish', () => deleteLocalFiles([imgPath]));
         return res.status(200).sendFile(imgPath.trim());
-      } else {
-        return res.status(500).send({error: 'Unable to elaborate your image'});
-      }
+      } 
     } catch {
       return res.status(500).send({error: 'Unable to process your request'})
     }
