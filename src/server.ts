@@ -15,7 +15,7 @@ import validUrl from 'valid-url';
   app.use(bodyParser.json());
 
 
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req:express.Request, res:express.Response) => {
     try {
       const { image_url } = req.query;
 
