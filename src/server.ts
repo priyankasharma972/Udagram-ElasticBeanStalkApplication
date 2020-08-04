@@ -14,11 +14,10 @@ import validUrl from 'valid-url';
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
 
-  
-  // A RESTFUL ENDPOINT to GET /filteredimage?image_url={{URL}}
-  app.get("/filteredimage/", async (req, res) => {
+
+  app.get("/filteredimage", async (req, res) => {
     try {
-      let { image_url } = req.query;
+      const { image_url } = req.query;
 
       // Not null check for query parameter
       if (!image_url) {
